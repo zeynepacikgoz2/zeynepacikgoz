@@ -242,24 +242,7 @@
             border-color: var(--primary-main);
         }
 
-        /* Toast Mesajı (Anlık Geri Bildirim) */
-        #toast {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--success);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 13px;
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            z-index: 100;
-            pointer-events: none;
-        }
-        #toast.show { bottom: 25px; }
+
 
         /* Mobil Cihazlar İçin Tasarım Uyumluluğu */
         @media (max-width: 900px) {
@@ -685,8 +668,7 @@
         </div>
     </div>
 
-    <!-- Toast Bildirim -->
-    <div id="toast">Sekme Değiştirildi</div>
+
 
     <script>
         // Web Audio API ile Sentetik "Click" Sesi
@@ -735,18 +717,7 @@
 
         }
 
-        // Şık Toast Mesajı Sistemi
-        let toastTimeout;
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.classList.add('show');
-            
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2000);
-        }
+
     </script>
 </body>
 </html>
