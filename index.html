@@ -261,6 +261,17 @@
         }
         #toast.show { bottom: 25px; }
 
+        /* Mobil Cihazlar İçin Tasarım Uyumluluğu */
+        @media (max-width: 900px) {
+            body { height: auto; overflow: auto; }
+            #scale-container { flex-direction: column; height: auto; overflow: visible; }
+            #left-pane { width: 100%; height: auto; border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); padding: 30px 20px; }
+            #right-pane { width: 100%; padding: 20px 10px; overflow: visible; }
+            .content-section { overflow-y: visible; padding-right: 0; }
+            ul.grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+            .tabs { flex-wrap: wrap; justify-content: center; gap: 8px; }
+            .tab-btn { padding: 8px 12px; font-size: 12px; }
+        }
     </style>
 </head>
 <body>
